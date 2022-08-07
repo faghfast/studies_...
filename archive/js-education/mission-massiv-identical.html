@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let massiv = [1, 2, 3, 4, 4, 5, 5, 7, 9, 1, 2, 3];
+
+			let j = massiv[0];
+			let result = "No";
+
+			for (i = 1; i < massiv.length; i++) {
+				if (massiv[i] === j) {
+					result = "Yes";
+					break;
+				} else {
+					j = massiv[i];
+				}
+			}
+			console.log(result);
+		</script>
+	</body>
+</html>

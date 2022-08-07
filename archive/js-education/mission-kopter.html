@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Взаимодействие с DOM</title>
+		<style>
+			#kvadro {
+				position: absolute;
+			}
+			#gruz {
+				position: absolute;
+				margin-top: 210px;
+				margin-left: 80px;
+				margin-right: 80px;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<img src="/images/kvadro.webp" alt="kvadro" id="kvadro" />
+		</div>
+		<div>
+			<img src="/images/gruz.png" alt="gruz" id="gruz" hidden />
+		</div>
+		<script>
+			let gruzImg = document.getElementById("gruz");
+			let kvadroImg = document.getElementById("kvadro");
+			let step = 0;
+			let stepp = 0;
+			let steppp = 0;
+			let flag = true;
+
+			function animation() {
+				if (window.innerWidth - 300 > step && flag) {
+					//Двигаем слева направо
+					kvadroImg.style.transform = "scaleX(1)";
+					step += 1;
+				} else {
+					// Двигаем справа налево
+					kvadroImg.style.transform = "scaleX(-1)";
+					step -= 1;
+					flag = step == 0 ? true : false;
+				}
+				kvadroImg.style.left = step + "px";
+			}
+			function animation2() {
+				if (Math.round(window.innerWidth / 2) > stepp + 100) {
+					stepp += 1;
+					gruzImg.style.left = stepp + "px";
+				} else if (window.innerHeight - 330 > steppp) {
+					gruzImg.style.top = steppp + "px";
+					steppp += 1;
+					gruzImg.hidden = false;
+				}
+			}
+
+			setInterval(animation, 10);
+			setInterval(animation2, 10);
+		</script>
+	</body>
+</html>

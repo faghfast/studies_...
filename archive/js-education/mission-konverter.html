@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Конвертер Валют</title>
+	</head>
+	<body>
+		<script>
+
+			let dollar = "53.30";
+			let euro = "56.11";
+			let a = prompt("Сумма для обмена = ");
+
+			let dol = ( Math.floor((a / dollar)*100)/100)
+			let eu = ( Math.floor((a / euro)*100)/100)
+
+
+
+			console.log("Курс доллара = " + dollar + " руб. " + "| Курс евро = " + euro + " руб. ");
+			alert("Итого получится= " + dol + " dol | " + eu + " eur ");
+
+
+		</script>
+	</body>
+</html>

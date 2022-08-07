@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+			crossorigin="anonymous"
+		/>
+		<style>
+			#oneCubes,
+			#twoCubes,
+			#threeCubes {
+				width: 200px;
+				height: 200px;
+				cursor: pointer;
+        margin-left: 20px;
+			}
+			#oneCubes {
+				background-color: rgb(179, 255, 0);
+				border-radius: 15%;
+				box-shadow: 5px 25px 25px rgb(144, 173, 75);
+			}
+			#twoCubes {
+				background-color: rgb(0, 255, 255);
+				border-radius: 15%;
+				box-shadow: 5px 25px 25px rgb(90, 198, 198);
+			}
+			#threeCubes {
+				background-color: rgb(51, 0, 255);
+				border-radius: 15%;
+				box-shadow: 5px 25px 25px rgb(76, 61, 135);
+			}
+			#bigCube {
+				width: 700px;
+				height: 700px;
+				background-color: rgb(202, 202, 202);
+				border-radius: 15%;
+				box-shadow: 5px 25px 25px rgb(110, 110, 110);
+			}
+			.box {
+				width: 250px;
+				height: 250px;
+			}
+		</style>
+		<title></title>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row mt-4">
+				<div class="col-3">
+					<div class="row">
+						<div class="box">
+							<div id="oneCubes"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="box">
+							<div id="twoCubes"></div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="box">
+							<div id="threeCubes"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-9">
+					<div id="bigCube"></div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			let oneCube = document.getElementById("oneCubes");
+			let twoCube = document.getElementById("twoCubes");
+			let threeCube = document.getElementById("threeCubes");
+			let bigCube = document.getElementById("bigCube");
+			let lals = document.querySelectorAll('div[id$="Cubes"]');
+			let lol = document.querySelector('div[id$="Cube"]');
+
+			for (lal of lals) {
+				lal.onmousedown = function (e) {
+					lal = e.currentTarget;
+					lal.style.position = "absolute";
+					lal.style.zIndex = 1000;
+					// document.body.append(lal);
+
+					document.addEventListener("mousemove", moveAt);
+					lal.onmouseup = function () {
+						document.removeEventListener("mousemove", moveAt);
+
+						lal.style.zIndex = 1;
+						let lal_top = lal.getBoundingClientRect().top;
+						let lal_left = lal.getBoundingClientRect().left;
+						let lal_right = lal.getBoundingClientRect().right;
+						let lal_bottom = lal.getBoundingClientRect().bottom;
+
+						let lol_top = lol.getBoundingClientRect().top;
+						let lol_left = lol.getBoundingClientRect().left;
+						let lol_right = lol.getBoundingClientRect().right;
+						let lol_bottom = lol.getBoundingClientRect().bottom;
+
+						if (
+							lal_top > lol_top &&
+							lal_left > lol_left &&
+							lal_right < lol_right &&
+							lal_bottom < lol_bottom
+						) {
+							lal.hidden = true;
+							lol.style.backgroundColor = getComputedStyle(lal).backgroundColor;
+							lol.style.boxShadow = getComputedStyle(lal).boxShadow;
+						}
+					};
+					lal.ondragstart = function () {
+						return false;
+					};
+				};
+			}
+			function moveAt(e) {
+				let x = event.pageX - 120;
+				let y = event.pageY - 120;
+				lal.style.top = y + "px";
+				lal.style.left = x + "px";
+			}
+		</script>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

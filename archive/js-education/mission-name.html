@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let arr = prompt("Введите ФИО: ");
+
+			let arr2 = arr.split(" ");
+
+			let surname = arr2[0];
+			let name = arr2[1];
+			let patronymic = arr2[2];
+
+			let name2 = name.split("");
+			let patronymic2 = patronymic.split("");
+
+			let initials = name2[0] + patronymic2[0];
+
+			let nname = surname + " " + initials;
+			alert(nname);
+		</script>
+	</body>
+</html>

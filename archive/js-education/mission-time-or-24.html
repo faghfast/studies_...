@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<script>
+			let hour = +prompt("Сколько целых часов сейчас?");
+			let min = +prompt("Сколько целых минут сейчас?");
+
+			let secondFromMindight = hour * 3600 + min * 60;
+			let minFromMindight = hour * 60 + min;
+			let minToMindight = 24 * 60 - minFromMindight;
+
+			console.log("Секунд от полуночи прошло: " + secondFromMindight);
+			console.log("Минут от полуночи прошло: " + minFromMindight);
+			console.log("Минут до полуночи осталось: " + minToMindight);
+		</script>
+	</body>
+</html>

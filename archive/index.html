@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="/css/style.css" />
+		<script src="https://kit.fontawesome.com/dc4f8560f3.js" crossorigin="anonymous"></script>
+		<link rel="shortcut icon" href="images/logo.png" />
+		<title>Главная страница</title>
+		<style>
+			.bluebox {
+				width: 25rem;
+				height: 30rem;
+			}
+			.big-picture {
+				background-image: url("images/offroad.webp");
+				background-size: cover;
+				background-position: center;
+				height: 1200px;
+			}
+			.box {
+				margin: auto;
+				max-width: 25rem;
+				max-height: 27rem;
+				background-color: rgba(255, 255, 0, 0.5);
+			}
+			.icon1 {
+				color: transparent;
+				-webkit-background-clip: text;
+				background-image: linear-gradient(90deg, red, orange, fuchsia);
+			}
+			.icon2 {
+				color: transparent;
+				-webkit-background-clip: text;
+				background-image: linear-gradient(to bottom, red, fuchsia);
+			}
+			.icon3 {
+				color: transparent;
+				-webkit-background-clip: text;
+				background-image: radial-gradient(red, orange, fuchsia);
+			}
+		</style>
+	</head>
+	<body>
+		<!--  Nav Menu start -->
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<a class="navbar-brand" href="index.html">
+				<img src="images/logo.png" width="30px" height="30px" alt="Ванька" /> Ванька</a
+			>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Переключатель навигации"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">Главная <span class="sr-only">(текущая)</span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a
+							class="nav-link dropdown-toggle"
+							href="#"
+							id="navbarDropdown"
+							role="button"
+							data-toggle="dropdown"
+							aria-haspopup="true"
+							aria-expanded="false"
+						>
+							Мои выполненные задания
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="mission-recept.html">1. Рецепт+таблица</a>
+							<a class="dropdown-item" href="mission-traffic-light.html">2. Светофор</a>
+							<a class="dropdown-item" href="mission-cube.html">3.1. "Кубики"</a>
+							<a class="dropdown-item" href="mission-smile.html">3.2. Улыбака человек</a>
+							<a class="dropdown-item" href="mission-container.html">4. Контейнеры</a>
+							<a class="dropdown-item" href="mission-copy-web-page.html">5. Визитка</a>
+						</div>
+					</li>
+				</ul>
+				<form class="form-inline my-2 my-lg-0">
+					<input
+						class="form-control mr-sm-2"
+						type="search"
+						placeholder="Поиск"
+						aria-label="Поиск"
+					/>
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+				</form>
+			</div>
+		</nav>
+		<!-- Nav Menu end -->
+
+		<!-- slider start -->
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="images/slaid_01.webp" class="d-block w-100" alt="Горы" />
+				</div>
+				<div class="carousel-item">
+					<img src="images/slaid_02.webp" class="d-block w-100" alt="Пляж" />
+				</div>
+				<div class="carousel-item">
+					<img src="images/slaid_03.webp" class="d-block w-100" alt="Море" />
+				</div>
+			</div>
+			<a
+				class="carousel-control-prev"
+				href="#carouselExampleIndicators"
+				role="button"
+				data-slide="prev"
+			>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Предыдущий</span>
+			</a>
+			<a
+				class="carousel-control-next"
+				href="#carouselExampleIndicators"
+				role="button"
+				data-slide="next"
+			>
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Следующий</span>
+			</a>
+		</div>
+		<!-- slider end -->
+		<br />
+		<!-- triple blox start -->
+		<div class="container-fluid">
+			<div class="row justify-content-center">
+				<div class="col-md m-2">
+					<div class="card text-center rounded mx-auto d-block bg-primary border-dark bluebox">
+						<div class="card-body"><i class="fa-brands fa-apple fa-10x m-4"></i></div>
+						<h3 class="card-title m-3">IOS</h3>
+					</div>
+				</div>
+				<div class="col-md m-2">
+					<div class="card text-center rounded mx-auto d-block bg-primary border-dark bluebox">
+						<div class="card-body"><i class="fa-solid fa-skull-crossbones fa-7x m-5"></i></div>
+						<h3 class="card-title m-3">Война бесконечности</h3>
+						<p class="card-text">На чью сторону встанешь ты?</p>
+					</div>
+				</div>
+				<div class="col-md m-2">
+					<div class="card text-center rounded mx-auto d-block bg-primary border-dark bluebox">
+						<div class="card-body"><i class="fa-brands fa-android fa-10x m-4"></i></div>
+						<h3 class="card-title m-3">Android</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- triple blox end -->
+		<br />
+		<!-- container+shadow text start -->
+		<div class="container-fluid d-flex big-picture">
+			<div class="box rounded-pill shadow p-3 border border-info">
+				<blockquote class="blockquote text-center">
+					<p class="mb-0 mt-2">
+						>"А какой смысл покупать машину, чтобы разъезжать по асфальту? Там, где асфальт, ничего
+						интересного, а где интересно, там нет асфальта."
+					</p>
+					<footer class="blockquote-footer">
+						А. и Б. Стругацкие
+						<cite title="Название источника">«Понедельник начинается в субботу».</cite>
+					</footer>
+				</blockquote>
+			</div>
+		</div>
+
+		<!-- container+shadow text end -->
+		<br />
+		<!-- contact form start -->
+		<div class="container my-5">
+			<h2 class="text-center">Связаться с нами</h2>
+			<div class="row">
+				<div class="col-md-4">
+					<h3>Контакты</h3>
+					<h4>Адрес:</h4>
+					<p>ул. Свободы, 35, Москва, 125364</p>
+					<h4>Телефон:</h4>
+					<a href="tel:+74952111856"> 8 (495) 211-18-65</a>
+					<h4>E-mail:</h4>
+					<a href="mailto:figi@mail.ru">figi@mail.ru</a>
+					<h4>График работы:</h4>
+					<p>пн-пт: 8:00-20:00</p>
+				</div>
+				<div class="col-md-8">
+					<form action="">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Имя" />
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" placeholder="E-mail" />
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="form-group">
+							<input type="submit" class="btn btn-danger form-control" placeholder="Имя" />
+						</div>
+					</form>
+					<div class="row">
+						<div class="col-md-4 text-center">
+							<i class="fa-solid fa-address-book fa-5x icon1"></i>
+						</div>
+						<div class="col-md-4 text-center">
+							<i class="fa-solid fa-apple-whole fa-5x icon2"></i>
+						</div>
+						<div class="col-md-4 text-center">
+							<i class="fa-solid fa-arrow-up-from-water-pump fa-5x icon3"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- contact form end -->
+		<br />
+		<!-- map start -->
+		<div class="container">
+			<h3 class="text-center">Схема прохода от метро "Сходненская"</h3>
+			<script
+				type="text/javascript"
+				charset="utf-8"
+				async
+				src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=mymaps%3AID8pinnDHDndB_dDYAvafUaMzwCMPpib&amp;width=100%25&amp;height=520&amp;lang=ru_RU&amp;scroll=true"
+			></script>
+		</div>
+		<!-- map end -->
+		<br />
+		<!-- footer start -->
+		<footer class="container text-center">
+			©
+			<script>
+				document.write(new Date().getFullYear());
+			</script>
+			Все права защищены
+		</footer>
+		<!-- footer end -->
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>

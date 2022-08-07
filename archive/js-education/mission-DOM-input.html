@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<input placeholder="Введите число." type="text" id="num1" />
+			<input placeholder="Тут будет результат." type="text" id="num2"/>
+			<button onclick="abc()">Нажми меня</button>
+		</div>
+
+		<script>
+			let buttonn = document.getElementById("button");
+			let num1 = document.getElementById("num1");
+			let num2 = document.getElementById("num2");
+
+
+			function abc() {
+				num2.value = num1.value **2;
+			}
+		</script>
+	</body>
+</html>
